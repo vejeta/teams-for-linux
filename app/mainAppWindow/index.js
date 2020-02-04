@@ -28,6 +28,7 @@ exports.onAppReady = function onAppReady() {
 	window.webContents.on('new-window', onNewWindow);
 
 	window.webContents.session.webRequest.onBeforeRequest(['http*'], onBeforeRequestHandler);
+	window.webContents.session.allowNTLMCredentialsForDomains('*');
 
 	login.handleLoginDialogTry(window);
 	if (config.onlineOfflineReload) {

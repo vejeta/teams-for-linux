@@ -1,14 +1,13 @@
 const {app, ipcMain, BrowserWindow} = require('electron');
 let isFirstLoginTry = true;
 
-exports.loginService = function loginService(parentWindow, callback) {	
+exports.loginService = function loginService(parentWindow, callback) {
 	let win = new BrowserWindow({
 		width: 363,
 		height: 124,
 		modal: true,
 		frame: false,
 		parent: parentWindow,
-
 		show: false,
 		autoHideMenuBar: true,
 	});
